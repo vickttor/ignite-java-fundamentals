@@ -1,6 +1,13 @@
-package fundamentals;
+package fundamentals.firstClass;
 
-public class Fundamentals {
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+public class GeneralUsage {
   // Class Scope
 
   public static void main(String[] args) {
@@ -14,6 +21,12 @@ public class Fundamentals {
 
     System.out.println("\n==== LOOPS ====\n");
     loops();
+
+    System.out.println("\n==== LISTS ====\n");
+    lists();
+
+    System.out.println("\n==== COLLECTIONS ====\n");
+    collections();
   }
 
 
@@ -85,6 +98,62 @@ public class Fundamentals {
       System.out.println("even Number: " + i);
 
     }
+
+  }
+
+  public static void lists() {
+
+    List<String> names = new ArrayList<String>();
+
+    names.add("Victor");
+    names.add("Carlos");
+    names.add("Rodrigo");
+
+    // for(String name : names) System.out.println(name);
+    // names.forEach(name -> System.out.println("The name is: " + name));
+    names.forEach(System.out::println);
+  }
+
+  public static void collections() {
+    // Hash Map (pair of keys and values)
+
+    Map<String, Double> scores = new HashMap<>(); 
+
+    scores.put("Victor", 10.0);    
+    scores.put("Pedro", 8.0);
+    scores.put("Lincon", 9.5);
+    scores.put("Goku", 10.0);
+
+    String target = "Victor";
+    Double score = scores.get(target);
+
+    System.out.println(target + ": " + score);
+
+    for(Map.Entry<String, Double> entry : scores.entrySet()) {
+      String key = entry.getKey();
+      Double value = entry.getValue();
+
+      System.out.println(key + ": " + value);
+    }
+
+    // Hash Set (Unique pair key-value)
+
+
+    Set<Integer> numbers = new HashSet<>();
+    numbers.add(10);
+    numbers.add(11);
+    numbers.add(12);
+    numbers.add(13);
+
+    numbers.remove(12);
+
+    for(Integer n : numbers){
+      System.out.println(n);
+    }
+
+    Integer numberTarget = 10;
+
+    System.out.println("it contains the number" + numberTarget + "? " + (numbers.contains(numberTarget) ? "Yes" : "Nop"));
 
   }
 }
