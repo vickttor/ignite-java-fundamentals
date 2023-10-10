@@ -7,7 +7,7 @@ public class Exceptions {
 
     public static void main(String[] args) {
         try {
-            validarNumero();
+            validateNumber();
         }catch (Exception e) {
             System.out.println(e.getMessage());
             // e.printStackTrace(); give more details
@@ -15,7 +15,7 @@ public class Exceptions {
 
     }
 
-    public static void validarNumero() throws Exception {
+    public static void validateNumber() throws Exception {
         int number = 10;
         if(number < 100) {
             throw new Exception("The number is lower than 100");
