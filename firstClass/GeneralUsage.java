@@ -32,11 +32,11 @@ public class GeneralUsage {
 
   public static void dataTypes() {
 
-    /**
+    /*
      * Numbers (int, double, float, long)
      * Text (String)
      * boolean (True or False)
-     * 
+     *
      */
 
     int aNumber = 10; // non-decimal numbers
@@ -61,8 +61,8 @@ public class GeneralUsage {
 
     String name = "Victor";
 
-    if(name.length() ==  6) {
-      System.out.println("The lenght is 6");
+    if(name.length() == 6) {
+      System.out.println("The length is 6");
     }else if(name.length() >= 6){
       System.out.println("It's a big name");
     }else{
@@ -73,17 +73,17 @@ public class GeneralUsage {
   public static void loops() {
     
     // while
-    int controler = 1;
+    int controller = 1;
 
-    while(controler <= 10) {
-      System.out.println(1 +" x 10 = " + (controler * 10));
-      controler++;
+    while(controller <= 10) {
+      System.out.println(1 +" x 10 = " + (controller * 10));
+      controller++;
     }
 
         System.out.println();
 
     // forEach
-    String listName[] = {"Victor", "Lincon", "Pedro"};
+    String[] listName = {"Victor", "Lincoln", "Pedro"};
 
     for (String name : listName) {
       System.out.println("Name: " + name);
@@ -93,7 +93,7 @@ public class GeneralUsage {
 
     // for
     for(int i = 0; i < 15; i++){
-      if(i % 2 != 0) continue; // jumpping
+      if(i % 2 != 0) continue; // jumping
       if(i == 10) break; // stopping;
       System.out.println("even Number: " + i);
 
@@ -121,7 +121,7 @@ public class GeneralUsage {
 
     scores.put("Victor", 10.0);    
     scores.put("Pedro", 8.0);
-    scores.put("Lincon", 9.5);
+    scores.put("Lincoln", 9.5);
     scores.put("Goku", 10.0);
 
     String target = "Victor";

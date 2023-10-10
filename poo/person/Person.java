@@ -1,11 +1,12 @@
 package fundamentals.poo.person;
 
-// Learning POO (Programming Object Oriented)
+// Learning POO (Programming Object-Oriented)
 
-public class Person {
+public abstract class Person {
   
   private String name;
   private int age;
+  private String cpf;
 
   public Person(String name, int age) {
     this.name = name;
@@ -31,6 +32,14 @@ public class Person {
 
   public void setAge(int age) {
     this.age = age;
+  }
+
+  public String getCpf() {
+    return cpf;
+  }
+
+  public void setCpf(String cpf) {
+    this.cpf = cpf;
   }
 
 }

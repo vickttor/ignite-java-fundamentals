@@ -1,16 +1,16 @@
 package fundamentals.poo;
 
-import fundamentals.poo.person.Person;
+import fundamentals.poo.person.Student;
+import fundamentals.poo.person.Teacher;
 import fundamentals.poo.bankAccount.BankAccount;
-
 
 public class App {
   public static void main(String[] args) {
 
-    Person person1 = new Person("Victor",18);
-    person1.showData();
+    Teacher teacher1 = new Teacher(5000.0, "Elias", 59);
+    Student student1 = new Student(20062, "Victor", 18);
 
-    BankAccount account1 = new BankAccount(1, person1.getName(), 0.0);
+    BankAccount account1 = new BankAccount(1, student1.getName(), 0.0);
 
     account1.deposit(55.5);
 
