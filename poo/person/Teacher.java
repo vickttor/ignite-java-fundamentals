@@ -16,4 +16,9 @@ public class Teacher extends Person {
   public void setIncomes(Double incomes) {
     this.incomes = incomes;
   }
+
+  public void printPersonData() {
+    super.printPersonData();
+    System.out.println("You're a teacher\n");
+  }
 }

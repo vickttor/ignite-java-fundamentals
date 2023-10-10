@@ -2,7 +2,7 @@ package fundamentals.poo.person;
 
 // Learning POO (Programming Object-Oriented)
 
-public abstract class Person {
+public class Person {
   
   private String name;
   private int age;
@@ -40,6 +40,11 @@ public abstract class Person {
 
   public void setCpf(String cpf) {
     this.cpf = cpf;
+  }
+
+  public void printPersonData() {
+    System.out.println("The person's name is " + name + ", the age is " +
+            age + "and his document is " + cpf);
   }
 
 }

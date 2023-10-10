@@ -6,7 +6,6 @@ public class Student extends Person {
 
   public Student(int RA, String name, int age) {
     super(name, age);
-
     this.RA = RA;
   }
 
@@ -18,4 +17,8 @@ public class Student extends Person {
     RA = rA;
   }
 
+  public void printPersonData() {
+    super.printPersonData();
+    System.out.println("You're a student\n");
+  }
 }
